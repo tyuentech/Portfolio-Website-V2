@@ -1,0 +1,193 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+nav, .tabs {
+    display: flex;
+}
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 12vh;
+}
+
+header {
+    background-color: black;
+}
+
+.name {
+    font-size: 2rem;
+    color: white;
+}
+
+.name:hover {
+    cursor: default;
+}
+
+.tabs {
+    list-style: none;
+    gap: 2rem;
+    font-size: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: gray;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: lightgray;
+}
+
+
+/* Hamburger Menu */
+
+#navbar-hamburger {
+    display: none;
+    z-index: 999;
+}
+
+#hamburger-menu {
+    position: relative;
+    display: inline-block;
+    
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3 ease-in-out;
+}
+
+/* .hamburger-tabs {
+    position: absolute;
+    top: 12%;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.737);
+    backdrop-filter: blur(10px);
+    box-shadow: -5px 0 5px lightgray;
+    width: 200px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+} */
+
+.hamburger-tabs {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    padding-top: 30px;
+    font-size: 1.5rem;
+    width: 300px;
+    /* z-index: 999; */
+    background-color: rgba(0, 0, 0, 0.737);
+    backdrop-filter: blur(10px);
+    box-shadow: 5px 0 5px lightgray;
+    display: none;
+    flex-direction: column;
+}
+
+.hamburger-tabs a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    /* text-decoration: none; */
+    transition: all 0.3 ease-in-out;
+}
+
+.hamburger-tabs li {
+    list-style: none;
+}
+
+.hamburger-exit-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 20px;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-exit-button span {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3 ease-in-out;
+}
+
+/* 'X' Button for extended hamburger bar */
+.hamburger-exit-button span:first-child {
+    transform:rotate(45deg) translate(10px, 5px);
+}
+.hamburger-exit-button span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger-exit-button span:last-child {
+    transform:rotate(-45deg) translate(10px, -5px);
+}
+/*--------------------------------------------------------*/
+
+/* Make the display flex when hamburger is opened so you can see menu */
+.hamburger-tabs.open {
+    /* max-height: 300px; */
+    display: flex;
+}
+
+
+/* transform hamburger icon to an 'X' */
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+}
+.hamburger-icon.open span:nth-child(2) {
+    opacity:0;
+}
+.hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+/*--------------------------------------------------------*/
+
+/* default hamburger icon properties as lines, not 'X' */
+.hamburger-icon span:first-child {
+    transform: none;
+}
+.hamburger-icon span:first-child {
+    opacity: 1;
+}
+.hamburger-icon span:first-child {
+    transform: none;
+}
+/*--------------------------------------------------------*/
+
+@media(max-width: 400px) {
+    .hamburger-tabs {
+        width: 100%;
+    }
+}
