@@ -104,7 +104,7 @@ a:hover {
     padding-top: 30px;
     font-size: 1.5rem;
     width: 300px;
-    /* z-index: 999; */
+    z-index: 999;
     background-color: rgba(0, 0, 0, 0.737);
     backdrop-filter: blur(10px);
     box-shadow: 5px 0 5px lightgray;
@@ -190,4 +190,102 @@ a:hover {
     .hamburger-tabs {
         width: 100%;
     }
+}
+
+
+
+
+
+.header-image img {
+    display: flex;
+    max-width: 100%;
+    max-height: 100vh;
+    /* width: 100%; */
+    object-fit: contain;
+}
+
+.header-image {
+    position: relative;
+    text-align: center;
+    color:black;
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.banner-text {
+    position: absolute;
+    top: 12vh;
+    left: 16vw;
+    font-size: 4vw;
+    /* left: 20vh; */
+}
+
+.banner-sub-text {
+    position: absolute;
+    display: flex;
+    color: rgba(0, 0, 0, 0.66);
+    top: 22vh;
+    left: 16vw;
+    font-size: 3.5vw;
+    white-space: nowrap;
+    /* left: 20vh; */
+}
+
+.banner-name {
+    position: absolute;
+    top: 12vh;
+    right: 16vw;
+    font-size: 4vw;
+}
+
+.test {
+    position: absolute;
+    top: 22vh;
+    right: 20vw;
+    cursor: pointer;
+}
+
+.test img {
+    width: 3em;
+}
+.test2 {
+    position: absolute;
+    top: 23vh;
+    right: 25vw;
+    cursor: pointer;
+}
+
+.test2 img {
+    width: 3em;
+}
+
+
+/* Sections */
+
+.about-container {
+    padding-top: 8vh;
+    margin: auto;
+    width: 65%;
+    display: flex;
+    justify-content: left;
+    /* align-items: center; */
+}
+
+.about-profile-pic {
+    text-align: center;
+}
+
+.about-profile-pic img{
+    border: 5px solid black;
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+}
+
+.right {
+    margin-left: 5%;
+}
+
+.about-text {
+    margin-top: 5%;
 }
